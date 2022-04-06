@@ -1,17 +1,13 @@
 // js file for about us program
 const scooterController = document.getElementById('scroll_scooter');
 const container = document.getElementById('container');
+const max = -120;
+const min = -800;
 const slideLength = 1530;
-const scrollLineLength = 700;
+const scrollLineLength = max-min;
 const scrollRatio = slideLength/scrollLineLength;
-/*
-dragController(scooterController);
-function dragController(elmnt) {
-    dragElement(elmnt);
-}*/
-dragElement(scooterController, container, -800, -100);
-//slide.addEventListener('scroll', moveController(scooterController, slide));
-//scooterController.addEventListener('click', moveSlide(scooterController, slide));
+
+dragElement(scooterController, container, min, max);
 
 function dragElement(elmnt, slide, min, max) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
