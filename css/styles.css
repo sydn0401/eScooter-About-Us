@@ -28,7 +28,7 @@ body {
 
 #header{
     display: block;
-    background-image: url(../img/common/main_background.png);
+    background-image: url('https://github.com/sydn0401/eScooter-About-Us/blob/main/img/common/main_background.png');
     width: 100%;
     height: 700px;
     background-repeat: no-repeat;
@@ -41,7 +41,7 @@ bar {
     display: block;
     width: 100%;
     height: 150px;
-    background-image: url(../img/common/gradient.png);
+    background-image: url('../img/common/gradient.png');
     background-size: cover;
     /*background-image: linear-gradient(rgba(92, 91, 91, 0.74), transparent 70%);*/
 }
