@@ -22,11 +22,11 @@ body {
     transition: opacity .2s ease;
 }
 
-.on:hover{
+.on:hover {
     opacity:1
 }
 
-#header{
+#header {
     display: block;
     background-image: url(../img/common/main_background.png);
     width: 100%;
@@ -46,19 +46,19 @@ bar {
     /*background-image: linear-gradient(rgba(92, 91, 91, 0.74), transparent 70%);*/
 }
 
-.navbar{
+.navbar {
     display: flex;
     width: 95%;
     margin-left: 73px;  
     justify-content: space-between; 
 }
 
-.logo{
+.logo {
     padding-top: 22px;
     margin-right: 50px;
 }
 
-.nav_text{
+.nav_text {
     position: relative;
     width: 61px;
     height: 30px;
@@ -66,7 +66,7 @@ bar {
     margin-right: 44px;
 }
 
-.right_nav{
+.right_nav {
     position: relative; 
     width: 100%;
     display: flex;
@@ -85,7 +85,7 @@ bar {
     margin-right: 46px;
 }
 
-.header_context{
+.header_context {
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -94,7 +94,7 @@ bar {
     top: 279px;
 }
 
-.header_try{
+.header_try {
     position: relative;
     margin-top: 23px;
 }
@@ -168,10 +168,10 @@ bar {
 }
 
 #about_us_picture {
-    padding-top: 80px;
+    padding-top:80px
 }
 
-.main_pic{
+.main_pic {
     display: inline-block;
     position: relative;
     overflow: visible;
@@ -183,11 +183,11 @@ bar {
   --tranX: 0px;
 }
 
-.main_pic > img{
+.main_pic > img {
     background-color: white;
 }
 
-#footer{
+#footer {
     background-color: black;
     width: 100%;
     height: 196px;
@@ -196,19 +196,19 @@ bar {
     margin-top: 100px;
 }
 
-.left_footer{
+.left_footer {
     display: inline-block;
     position: relative;
     margin-left: 70px;
     margin-top: 45px;
 }
 
-.wara2022{
+.wara2022 {
     position: relative;
     margin-top: 32.02px;
 }
 
-.right_footer{
+.right_footer {
     display: inline-block;
     position: relative;   
     margin-right:189px
@@ -221,13 +221,13 @@ bar {
     width:max-content
 }
 
-.right_footer_left_up{
+.right_footer_left_up {
     display: flex;
     position: relative;
     margin-top: 44px;
 }
 
-.right_footer_left_down{
+.right_footer_left_down {
     position: relative;
     margin-top: 50px;
     float: inline-end;
@@ -241,7 +241,7 @@ bar {
     margin-right: 45px;
 }
 
-#topButton{
+#topButton {
     display: block;
     position: fixed;
     right: 0px;
@@ -250,5 +250,8 @@ bar {
     height: max-content;
     margin-top: 44px;
     margin-right: 70px;
+    opacity: 0;
+    will-change: opacity;
+    transition-duration: 300ms;
     z-index: 99;
 }
