@@ -1,13 +1,29 @@
 // js file for about us program
 const scooterController = document.getElementById('scroll_scooter');
 const container = document.getElementById('container');
-const currentWindowWidth = window.innerWidth;
-const currentWindowHeight = window.innerHeight;
+var currentWindowWidth = window.innerWidth;
+var currentWindowHeight = window.innerHeight;
 const max = -100; //-100
 const min = -800;
-const slideLength = 1530;//1530
+var slideLength = 2968-currentWindowWidth;
 const scrollLineLength = max-min;
-const scrollRatio = slideLength/scrollLineLength;
+var scrollRatio = slideLength/scrollLineLength;
+/*
+window.onresize = reportWindowSize;
+function reportWindowSize() {
+  var newWidth = window.innerWidth;
+  if(currentWindowWidth!==newWidth){
+    window.location = window.location;
+  }
+}
+*/
+window.onresize = function (){
+    currentWindowWidth = window.innerWidth;
+    slideLength = 2968-currentWindowWidth;
+    scrollRatio = slideLength/scrollLineLength;
+    container.addEventListener('mousedown', mouseDownHandler);
+    container.addEventListener('scroll', scrollContentHandler);
+}
 
 dragElement(scooterController, container, min, max);
 
@@ -115,7 +131,7 @@ const aboutUs = function() {
     // Attach the `mousedown` event handler
     scooterController.addEventListener('mousedown', mouseDownThumbHandler);
 
-    const scrollContentHandler = function () {
+    var scrollContentHandler = function () {
         window.requestAnimationFrame(function () {
             scooterController.style.left = (container.scrollLeft/scrollRatio)-800+'px';
         });
