@@ -19,11 +19,11 @@ body {
     top: 0;
     opacity: 0;
     will-change: opacity;
-    transition: opacity .3s ease;
+    transition: opacity .2s ease;
 }
 
 .on:hover{
-    opacity: 1;
+    opacity:1
 }
 
 #header{
@@ -99,7 +99,7 @@ bar {
     margin-top: 23px;
 }
 
-.main_section {
+.about_us_section {
     width: calc(100%-140px);
     margin-left: 70px;
     margin-right: 70px;
@@ -181,6 +181,10 @@ bar {
     margin-right: 36px;
     transform: translateX(var(--tranX));
   --tranX: 0px;
+}
+
+.main_pic > img{
+    background-color: white;
 }
 
 #footer{
