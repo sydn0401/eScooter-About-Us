@@ -45,7 +45,6 @@ const button = document.getElementById("topButton");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > step || document.documentElement.scrollTop > step) {
-        
         button.style.opacity = "1";
     } else {
         button.style.opacity = "0";
@@ -60,8 +59,7 @@ const aboutUs = function() {
 // Grab items to scroll
 !function() {
     const container = document.getElementById('container');
-    //ele.scrollTop = 100;
-    container.scrollLeft = 0;
+    //container.scrollLeft = 0;
     let pos = { left: 0, x: 0};
 
     const mouseDownHandler = function (e) {
@@ -85,6 +83,8 @@ const aboutUs = function() {
         container.style.cursor = 'grab';
         container.style.removeProperty('user-select');
     };
+
+    container.addEventListener('mousedown', mouseDownHandler);
 }();
 
 !function() {
@@ -124,10 +124,11 @@ const aboutUs = function() {
 }();
 //Jump when clicking the track
 /*
+const track = document.getElementById('scroll_line');
 const trackClickHandler = function (e) {
     const bound = track.getBoundingClientRect();
-    const percentage = (e.clientY - bound.top) / bound.height;
-    container.scrollLeft = percentage * (container.scrollHeight - container.clientHeight);
+    const percentage = (e.clientY - bound.left) / bound.width;
+    container.scrollLeft = percentage * (container.scrollWidth - container.clientWidth);
 };
 
 track.addEventListener('click', trackClickHandler);
