@@ -146,6 +146,15 @@ bar {
 .horizontal_slider::-webkit-scrollbar {
     display:none
 }
+.horizontal_slider::-moz-scrollbar {
+    display:none
+}
+.horizontal_slider::-ms-scrollbar {
+    display:none
+}
+.horizontal_slider::-o-scrollbar {
+    display:none
+}
 
 .container {
     display: inherit;
@@ -157,13 +166,22 @@ bar {
 
 #container {
     display: block;
-    cursor: grab;
+    /*cursor: pointer;*/
     overflow: scroll;
     transform: translateX(var(--tranX));
     --tranX: 0px;
 }
 
 #container::-webkit-scrollbar {
+    display:none
+}
+#container::-moz-scrollbar {
+    display:none
+}
+#container::-ms-scrollbar {
+    display:none
+}
+#container::-o-scrollbar {
     display:none
 }
 
@@ -185,6 +203,11 @@ bar {
 
 .main_pic > img {
     background-color: white;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 #footer {
