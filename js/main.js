@@ -39,20 +39,23 @@ function dragElement(elmnt, slide, min, max) {
 }
 
 const step = 20;
+const body = $("html, body");
 const button = document.getElementById("topButton");
+
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     if (document.body.scrollTop > step || document.documentElement.scrollTop > step) {
-        button.style.display = "block";
+        
+        button.style.opacity = "1";
     } else {
-        button.style.display = "none";
+        button.style.opacity = "0";
     }
 }
 const scrollToTop = function() {
-    $("html, body").animate({scrollTop: "0"});
+    body.animate({scrollTop: 0});
 }
 const aboutUs = function() {
-    $("#about_us_section").get(0).scrollIntoView();
+    body.animate({scrollTop: 700}, 500, 'swing');
 }
 // Grab items to scroll
 !function() {
